@@ -1,0 +1,10 @@
+# IDE
+/.idea
+/.settings
+/.vscode
+.classpath
+.factorypath
+.project
+
+/allure-results
+/node_modules
