@@ -1,7 +1,7 @@
 
 # Wdio Cucumber Evaluation
 
-#### This framework it based on: [Webdriverio](https://webdriver.io/) for web browser testing and [Appium](https://appium.io/) for mobile testing
+#### This framework is based on: [Webdriverio](https://webdriver.io/) for web browser testing and [Appium](https://appium.io/) for mobile testing
 
 #### Uses:
 * [Cucumber](https://cucumber.io/) as the testing framework and for BDD test case declaration.
