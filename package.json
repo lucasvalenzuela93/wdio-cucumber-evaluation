@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "wdio": "wdio run wdio.conf.js"
+        "web": "wdio run config/web.conf.js",
+        "android": "wdio run config/android.conf.js"
     },
     "author": "Lucas Valenzuela",
     "license": "ISC",

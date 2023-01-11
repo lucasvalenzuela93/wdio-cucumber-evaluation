@@ -1,7 +1,7 @@
 
-# Exercise Evaluation Lucas Valenzuela
+# Wdio Cucumber Evaluation
 
-#### This framework it based on: [Webdriverio](https://webdriver.io/) for web browser testing
+#### This framework it based on: [Webdriverio](https://webdriver.io/) for web browser testing and [Appium](https://appium.io/) for mobile testing
 
 #### Uses:
 * [Cucumber](https://cucumber.io/) as the testing framework and for BDD test case declaration.
@@ -16,14 +16,27 @@ The [step definitions](https://cucumber.io/docs/cucumber/step-definitions/) file
 The step definitions are the scripts that _translate_ Gherkin steps into executable code.
 
 ### Page Objects
-The [Page Objects](https://martinfowler.com/bliki/PageObject.html) are found in the [`./pageObjects`](./pageObjects) folder.
+The [Page Objects](https://martinfowler.com/bliki/PageObject.html) are found in the [`./pageobjects`](./pageobjects) folder.
 
 ## Pre-requisites
 ##### In order to run the tests in your local environment you would need to have:
+* Clone repo in your local
 * Node: This suite should run using at least Node version 16. Go to you CLI and do a `node -v` and you should be able to see which version are you running.
 * [JDK](https://www.oracle.com/java/technologies/downloads/)
-* Clone repo in your local
-* Made a `npcm ci` or `npm install` to install al required dependencies
+* [Appium doctor](https://www.npmjs.com/package/@appium/doctor) in order to check all requisites to run appium test in a local enviroment
+* [Android studio](https://developer.android.com/studio) for android emulator (More info [here](https://developer.android.com/studio/run/emulator))
+* Made a `npm install` to install al required dependencies
 
-## How to run tests locally
-Using a terminal move to repo folder and using the following command `npm run wdio` for desktop chrome browser
+
+## How to run
+First of all, using a terminal move to repo folder, and then:
+
+* For web test: use the command `npm run web`
+
+* For android tests:
+  * Make sure to have up an android emulator, create a new one and set device name and android version (platformVersion) in [`android.conf.js`](./config/android.conf.js) capabilities
+  or you can use the existing:
+    - 'appium:deviceName': 'Nexus_6P',
+    - 'appium:platformVersion': '11.0',
+  * This framework implements appium-service, in order to run android tests make sure to NOT have any appium server up
+  * Finally you can run android tests with `npm run android` 
