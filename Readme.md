@@ -1,42 +1,39 @@
-
 # Wdio Cucumber Evaluation
 
-#### This framework is based on: [Webdriverio](https://webdriver.io/) for web browser testing and [Appium](https://appium.io/) for mobile testing
+#### This framework is based on:
+- [WebdriverIO](https://webdriver.io/) for web browser testing
+- [Appium](https://appium.io/) for mobile testing
 
 #### Uses:
-* [Cucumber](https://cucumber.io/) as the testing framework and for BDD test case declaration.
-* The [Page Object](https://martinfowler.com/bliki/PageObject.html) design pattern.
+- [Cucumber](https://cucumber.io/) as the testing framework and for BDD test case declaration
+- The [Page Object](https://martinfowler.com/bliki/PageObject.html) design pattern
 
 ### Gherkin Feature Definitions
-[Gherkin](https://cucumber.io/docs/gherkin/reference/) files are found in the [`./features`](./features) folder.
-Those are the features-under-test definition in a human readable language.
+[Gherkin](https://cucumber.io/docs/gherkin/reference/) files are located in the [`./features`](./features) folder. These files contain the features-under-test definitions in a human-readable language.
 
 ### Step Definitions
-The [step definitions](https://cucumber.io/docs/cucumber/step-definitions/) files are found in the [`./steps`](./steps) folder.
-The step definitions are the scripts that _translate_ Gherkin steps into executable code.
+The [step definitions](https://cucumber.io/docs/cucumber/step-definitions/) are found in the [`./steps`](./steps) folder. These scripts translate Gherkin steps into executable code.
 
 ### Page Objects
-The [Page Objects](https://martinfowler.com/bliki/PageObject.html) are found in the [`./pageobjects`](./pageobjects) folder.
+The [Page Objects](https://martinfowler.com/bliki/PageObject.html) can be found in the [`./pageobjects`](./pageobjects) folder.
 
 ## Pre-requisites
-##### In order to run the tests in your local environment you would need to have:
-* Clone repo in your local
-* Node: This suite should run using at least Node version 16. Go to you CLI and do a `node -v` and you should be able to see which version are you running.
-* [JDK](https://www.oracle.com/java/technologies/downloads/)
-* [Appium doctor](https://www.npmjs.com/package/@appium/doctor) in order to check all requisites to run appium test in a local enviroment
-* [Android studio](https://developer.android.com/studio) for android emulator (More info [here](https://developer.android.com/studio/run/emulator))
-* Made a `npm install` to install al required dependencies
+To run the tests in your local environment, ensure you have the following:
+- Clone the repository to your local machine
+- Node: This suite requires at least Node version 16. Run `node -v` in your CLI to check your current version.
+- [JDK](https://www.oracle.com/java/technologies/downloads/)
+- [Appium Doctor](https://www.npmjs.com/package/@appium/doctor) to check all prerequisites for running Appium tests in a local environment
+- [Android Studio](https://developer.android.com/studio) for the Android emulator (More info [here](https://developer.android.com/studio/run/emulator))
+- Run `npm install` to install all required dependencies
 
+## How to Run
+First, navigate to the repository folder using your terminal, then:
 
-## How to run
-First of all, using a terminal move to repo folder, and then:
-
-* For web test: use the command `npm run web`
-
-* For android tests:
-  * Make sure to have up an android emulator, create a new one and set device name and android version (platformVersion) in [`android.conf.js`](./config/android.conf.js) capabilities
-  or you can use the existing:
-    - 'appium:deviceName': 'Nexus_6P',
-    - 'appium:platformVersion': '11.0',
-  * This framework implements appium-service, in order to run android tests make sure to NOT have any appium server up
-  * Finally you can run android tests with `npm run android` 
+- For web tests, use the command: `npm run web`
+  
+- For Android tests:
+  - Ensure you have an Android emulator running. You can create a new one and set the device name and Android version (platformVersion) in [`android.conf.js`](./config/android.conf.js) capabilities, or use the existing options:
+    - 'appium:deviceName': 'Nexus_6P'
+    - 'appium:platformVersion': '11.0'
+  - This framework implements Appium service; ensure you do NOT have any Appium server running.
+  - Finally, run Android tests with: `npm run android`
