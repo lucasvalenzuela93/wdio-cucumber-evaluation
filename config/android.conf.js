@@ -1,4 +1,4 @@
-const { config } = require('./wdio.conf1.js');
+const { config } = require('./wdio.conf.js');
 
 config.services.push( ["appium"]);
 config.port = 4723;
